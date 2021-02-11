@@ -1,0 +1,69 @@
+﻿@page
+@model UsageModel
+@{
+    ViewData["Title"] = "Usage";
+}
+
+<style>
+    #myList { 
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+    } 
+    #Architecture{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+    }
+
+</style>
+
+<div class="text-justify">
+    <h1 class="display-4">Usage</h1>
+    <p>Using our privacy preserving precision medicine software is easy. Simply follow the steps below.</p>
+    <ol>
+        <li>Download the client application from our <a href="@Url.Page("./Download")">downloads page</a></li>
+        <li>Create a CSV containing your test samples, with no column headers, where the <i>i</i><sup>th</sup> row corresponds to the <i>i</i><sup>th</sup> sample and the <i>j</i><sup>th</sup> column corresponds to the <i>j</i><sup>th</sup> feature, and place it in the same directory as the client applicaiton</li>
+        <li>Open a command line and run the client application by typing the name of the applicaiton, "MLE", and pressing enter</li>
+        <li>Follow the prompts that appear. Results will be saved in a file called Results.csv where the <i>i</i><sup>th</sup> row corresponds to the <i>i</i><sup>th</sup> sample and the <i>k</i><sup>th</sup> column corresponds to the <i>k</i><sup>th</sup> class</li>
+    </ol>
+    <p>The features used for the privacy preserving genomic analysis model are those used in <a href="https://dx.doi.org/10.1001%2Fjamaoncol.2019.3985">Penson et al.</a></p>
+    <p>The classes with their corresponding index are:</p>
+    <ol id="myList"  start="0">
+        <li>Bladder Cancer</li>
+        <li>Breast Cancer</li>
+        <li>Cholangiocarcinoma</li>
+        <li>Colorectal Cancer</li>
+        <li>Endometrial Cancer</li>
+        <li>Esophagogastric Cancer</li>
+        <li>Gastrointestinal Stromal Tumor</li>
+        <li>Germ Cell Tumor</li>
+        <li>Glioma</li>
+        <li>Head and Neck Cancer</li>
+        <li>Melanoma</li>
+        <li>Mesothelioma</li>
+        <li>Neuroblastoma</li>
+        <li>Non Small Cell Lung Cancer</li>
+        <li>Ovarian Cancer</li>
+        <li>Pancreatic Cancer</li>
+        <li>Pancreatic Neuroendocrine Tumor</li>
+        <li>Prostate Cancer</li>
+        <li>Renal Cell Cancer</li>
+        <li>Small Cell Lung Cancer</li>
+        <li>Thyroid Cancer</li>
+        <li>Uveal Melanoma</li>
+    </ol>
+    <h5>Architecture:</h5>
+
+    <img id="Architecture" src="images/blockDiagram.svg" />
+    <p> In the current prototype, the client and server have a single interaction. The Client sends the encrpyted test 
+        samples along with the public key to the server, and the server returns the encrypted weighted sums, which are
+        decrpyted on the server side using the client's private key. A new key pair is automatically generated for each 
+        interaction and disposed of after a single use. Therefore, the server never has access to the private key or the
+        plain text sample data, only the encrypted sample data and the encrypted weighted sums. Below is a sequence
+        diagram further illustrating this interaction</p>
+    <img id="Architecture" src="images/sequenceDiagram.svg" />
+    <h5>References:</h5>
+    <p>Penson A, Camacho N, Zheng Y, et al. Development of Genome-Derived Tumor Type Prediction to Inform Clinical Cancer Care. JAMA Oncol. 2020;6(1):84–91. <a href="https://dx.doi.org/10.1001%2Fjamaoncol.2019.3985">doi:10.1001/jamaoncol.2019.3985</a></p>
+</div>

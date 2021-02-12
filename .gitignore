@@ -1,0 +1,14 @@
+*~
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.blg
+*.out
+*.spl
+*.toc
+*.synctex*
+**/bin
+**/obj
+TMP*.sh
+.DS_Store

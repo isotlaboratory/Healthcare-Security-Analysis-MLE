@@ -69,6 +69,7 @@ From the Server directory, do the following:
 
 * After compilation, copy the entire publishing folder into `/var/www/MLE` with:
 
+        sudo rm /var/www/MLE/ -r
         sudo cp ./bin/Release/netcoreapp3.1/publish/ /var/www/MLE/ -r
 
 * Then restart the service with:

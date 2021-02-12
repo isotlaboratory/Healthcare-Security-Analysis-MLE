@@ -19,7 +19,7 @@ open-source repository that contains:
   [`SystemArchitecture`](./SystemArchitecture)). Please, read below for more information.
 * all the ML experiments and code (folder [`ModelTraining`](./ModelTraining))
 * the final predictive model deployed and the MLE framework, both deployed to a free cloud service
-  [`http://mle.isot.ca`](http://mle.isot.ca)
+  [`https://mle.isot.ca`](https://mle.isot.ca)
 
 # System Architecture of MLE Framework #
 The server is meant to be deployed as a service, hence referred to as MLE.service, which is not

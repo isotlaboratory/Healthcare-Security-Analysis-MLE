@@ -100,20 +100,21 @@ From the Client directory, do the following:
 
 # References #
 * Briguglio, W., Moghaddam, P., Yousef, W. A., Traore, I., & Mamun, M. (2021) "Machine Learning in
-Precision Medicine to Preserve Privacy via Encryption". arXiv Preprint, arXiv:2102.03412.
+Precision Medicine to Preserve Privacy via Encryption". [arXiv Preprint,
+arXiv:2102.03412](https://arxiv.org/abs/2102.03412).
 
 # Citation #
-
 Please, cite this work as
 
 ```
-@Misc{Briguglio2021MachineLearningViaEncryption,
+@Article{Briguglio2021MachineLearningPrecisionMedicine-arxiv,
   author =       {William Briguglio and Parisa Moghaddam and Waleed A. Yousef and Issa Traore and
-                  Mamum Mamun},
-  title =        {Machine Learning via Encryption (MLE) Framework for Precision Medicine with
-                  Preserving Privacy},
-  howpublished = {\url{https://github.com/isotlaboratory/Healthcare-Security-Analysis-MLE}},
-  year =         2021
+                  Mohammad Mamun},
+  title =        {Machine Learning in Precision Medicine to Preserve Privacy via Encryption},
+  journal =      {arXiv Preprint, arXiv:2102.03412},
+  year =         2021,
+  url =          {https://github.com/isotlaboratory/Healthcare-Security-Analysis-MLE},
+  primaryclass = {cs.LG}
 }
 ```
 
